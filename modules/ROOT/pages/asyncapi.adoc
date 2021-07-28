@@ -1,0 +1,282 @@
+:toc:
+:toclevels: 3
+:source-highlighter: coderay
+
+= My Lovely Messaging API 1.2.3 documentation
+
+//
+//
+
+[#servers]
+== Servers
+
+[cols=",,",options="header",separator="¦"]
+|===
+¦URL ¦Protocol ¦Description 
+
+//
+¦api.{country}.lovely.com:5672 ¦amqp 0.9.1 ¦ Production instance.
+
+//  
+
+
+
+//  
+//
+
+
+|===
+//
+
+
+== Channels
+
+
+
+=== `another.one`
+
+
+
+.Parameters 
+[%collapsible,caption=]
+====
+[cols=",,,a",options="header",separator="¦"]
+|===
+¦Name ¦Type ¦Description ¦Accepted values
+
+|===
+====
+
+
+Offers the following operations:
+
+
+
+====  `SUB` 
+
+// 
+
+// 
+
+===== *MainMyAnotherMessage* message
+
+
+
+// 
+Sample consumer
+// 
+
+// 
+This is another sample schema.
+// 
+
+// 
+
+====== MainMyAnotherMessage headers
+
+
+// 
+[cols=",,,a",options="header",separator="¦"]
+|===
+¦Name ¦Type ¦Description ¦Possible values
+// 
+
+
+¦`X-Trace-ID` 
+¦string
+¦ Tracing header 
+¦_Any_  
+// 
+|===
+// 
+
+
+
+
+// 
+
+.MainMyAnotherMessage headers _(generated)_
+====
+```json
+{
+  "X-Trace-ID": "string"
+}
+```
+====
+// 
+// 
+
+// 
+
+====== MainMyAnotherMessage payload
+
+
+// 
+[cols=",,,a",options="header",separator="¦"]
+|===
+¦Name ¦Type ¦Description ¦Possible values
+// 
+
+
+¦`item` 
+¦object
+¦ Some item 
+¦_Any_  
+
+
+
+¦`item.key` 
+¦string
+¦ Item key 
+¦_Any_  
+
+
+
+¦`item.values` 
+¦array,null(integer)
+¦ List of item values 
+¦_Any_  
+// 
+|===
+// 
+
+
+
+
+//   
+
+.MainMyAnotherMessage payload _(generated)_
+====
+```json
+{
+  "item": {
+    "key": "string",
+    "values": null
+  }
+}
+```
+//   
+// 
+====
+
+
+// 
+
+// 
+
+// 
+
+
+
+
+
+=== `one.{name}.two`
+
+
+
+.Parameters 
+[%collapsible,caption=]
+====
+[cols=",,,a",options="header",separator="¦"]
+|===
+¦Name ¦Type ¦Description ¦Accepted values
+
+
+¦`name` 
+¦string
+¦ Name 
+¦_Any_  
+
+|===
+====
+
+
+Offers the following operations:
+
+
+
+====  `PUB` 
+
+// 
+
+// 
+
+===== *MainMyMessage* message
+
+
+
+// 
+Sample publisher
+// 
+
+// 
+This is a sample schema.
+// 
+
+// 
+
+// 
+
+====== MainMyMessage payload
+
+
+// 
+[cols=",,,a",options="header",separator="¦"]
+|===
+¦Name ¦Type ¦Description ¦Possible values
+// 
+
+
+¦`createdAt` 
+¦string
+¦ Creation time 
+¦_Any_  
+
+¦`items` 
+¦array,null(object)
+¦ List of items 
+¦_Any_  
+
+
+¦`items.key` 
+¦string
+¦ Item key 
+¦_Any_  
+
+
+¦`items.values` 
+¦array,null(integer)
+¦ List of item values 
+¦_Any_  
+// 
+|===
+// 
+
+
+
+
+//   
+
+.MainMyMessage payload _(generated)_
+====
+```json
+{
+  "createdAt": "2019-08-24T14:15:22Z",
+  "items": null
+}
+```
+//   
+// 
+====
+
+
+// 
+
+// 
+
+// 
+
+
+
+
+

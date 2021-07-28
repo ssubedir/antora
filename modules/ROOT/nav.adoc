@@ -1,0 +1,1 @@
+* xref:asyncapi.adoc[Asyncapi]
